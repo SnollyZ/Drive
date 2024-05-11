@@ -12,6 +12,9 @@ TagManager:
   - Grass
   - Stone
   - Tiles
+  - Front
+  - Back
+  - CarStand
   layers:
   - Default
   - TransparentFX
