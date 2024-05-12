@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DataBases;
 using UnityEngine;
 using Zenject;
