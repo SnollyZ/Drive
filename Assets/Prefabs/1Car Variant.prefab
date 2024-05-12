@@ -737,12 +737,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 6, y: 2, z: 4.667677}
-  m_Center: {x: 0, y: 0, z: -0.32869208}
+  m_Size: {x: 2.9113972, y: 2, z: 4.667677}
+  m_Center: {x: 0.04819832, y: 0, z: -0.32869208}
 --- !u!4 &7225370648365741290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4059408022180311085, guid: 9df7f259d6c0f4cd5b4d9d0b5239a13e, type: 3}

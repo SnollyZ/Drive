@@ -14,16 +14,18 @@ public class CarStand : MonoBehaviour
     
 
     private CarInfo _carInfo;
-    private UIController _uiController;
+    private GarageUIController _garageUIController;
     private CamPivotController _cameraController;
     private PlayerController _playerController;
+    private SceneDataContainer _sceneDataContainer;
 
     [Inject]
-    public void Construct(UIController uiController, CamPivotController cameraController, PlayerController playerController)
+    public void Construct(GarageUIController garageUIController, CamPivotController cameraController, PlayerController playerController, SceneDataContainer sceneDataContainer)
     {
-        _uiController = uiController;
+        _garageUIController = garageUIController;
         _cameraController = cameraController;
         _playerController = playerController;
+        _sceneDataContainer = sceneDataContainer;
     }
     private void Start()
     {
@@ -41,9 +43,10 @@ public class CarStand : MonoBehaviour
 
     public void SetCameraOnStandActive(bool isActive)
     {
-        _uiController.SetAllUIActive(!isActive);
+        _garageUIController.SetAllUIActive(!isActive);
         _cameraController.gameObject.SetActive(!isActive);
         _playerController.gameObject.SetActive(!isActive);
         cameraObj.SetActive(isActive);
+        _sceneDataContainer.SelectedCarType = _type;
     }
 }

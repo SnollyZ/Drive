@@ -605,6 +605,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6919367231951522769, guid: 52c4368181585463fae05dc8f6a57f39, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1459806108347783484}
+    - targetCorrespondingSourceObject: {fileID: 6919367231951522769, guid: 52c4368181585463fae05dc8f6a57f39, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1946142862974659114}
     - targetCorrespondingSourceObject: {fileID: 8908727105724229275, guid: 52c4368181585463fae05dc8f6a57f39, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3917196759474107216}
@@ -893,6 +896,27 @@ MonoBehaviour:
   ControllRotation: 0
   GenerateOnStart: 0
   VehicleMesh: {fileID: 4296797367384914697}
+--- !u!65 &1946142862974659114
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296797367384914697}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.221885, y: 2.8071463, z: 5.0951333}
+  m_Center: {x: -0.02100304, y: 0.9035722, z: -0.82620585}
 --- !u!4 &4296797367384914709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6919367231951522765, guid: 52c4368181585463fae05dc8f6a57f39, type: 3}

@@ -1,14 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class UIController : MonoBehaviour
+public class GarageUIController : MonoBehaviour
 {
     [SerializeField] private GameObject selectCarBtnObj;
     [SerializeField] private GameObject backBtnObj;
     [SerializeField] private GameObject startBtnObj;
     [SerializeField] private GameManagerAndUI gameManagerAndUI;
+    
     private CarStand _currentCarStand;
+    private SceneLoader _sceneLoader;
+
+    [Inject]
+    public void Construct(SceneLoader sceneLoader)
+    {
+        _sceneLoader = sceneLoader;
+    }
 
     public void CallSelectCarBtn(CarStand currentCarStand)
     {
@@ -52,6 +59,6 @@ public class UIController : MonoBehaviour
 
     public void StartBtnOnClick()
     {
-        
+        _sceneLoader.LoadSceneByIndex(1);
     }
 }

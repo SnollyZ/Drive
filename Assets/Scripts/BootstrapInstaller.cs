@@ -1,41 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Zenject;
 
 namespace Common.Infrastructure
 {
     public class BootstrapInstaller : MonoInstaller
     {
-        public UIController UIController;
-        public CamPivotController CameraController;
-        public PlayerController PlayerController;
-        public InputService InputService;
+        public SceneDataContainer SceneDataContainer;
+        public SceneLoader SceneLoader;
+        
         public override void InstallBindings()
         {
-            BindUIController();
-            BindCameraController();
-            BindPlayerController();
-            BindInputService();
+            BindSceneDataContainer();
+            BindSceneLoader();
         }
 
-        private void BindUIController()
+        
+        
+        private void BindSceneDataContainer()
         {
-            Container.Bind<UIController>().FromInstance(UIController).AsSingle();
-        }
-        private void BindCameraController()
-        {
-            Container.Bind<CamPivotController>().FromInstance(CameraController).AsSingle();
-        }
-
-        private void BindPlayerController()
-        {
-            Container.Bind<PlayerController>().FromInstance(PlayerController).AsSingle();
+            Container.Bind<SceneDataContainer>().FromComponentInNewPrefab(SceneDataContainer).AsSingle();
         }
         
-        private void BindInputService()
+        private void BindSceneLoader()
         {
-            Container.Bind<InputService>().FromInstance(InputService).AsSingle();
+            Container.Bind<SceneLoader>().FromComponentInNewPrefab(SceneLoader).AsSingle();
         }
+        
     }
 }

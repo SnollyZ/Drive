@@ -7,20 +7,20 @@ using Zenject;
 
 public class PlayerController : MonoBehaviour
 {
-    private UIController _uiController;
+    private GarageUIController _garageUIController;
     
     [Inject]
-    public void Construct(UIController uiController, CamPivotController cameraController)
+    public void Construct(GarageUIController garageUIController, CamPivotController cameraController)
     {
-        _uiController = uiController;
+        _garageUIController = garageUIController;
     }
     private void OnTriggerEnter(Collider other)
     {
-        _uiController.CallSelectCarBtn(other.transform.parent.GetComponent<CarStand>());
+        _garageUIController.CallSelectCarBtn(other.transform.GetComponent<CarStand>());
     }
 
     private void OnTriggerExit(Collider other)
     {
-        _uiController.SetSelectCarBtnObjActive(false);
+        _garageUIController.SetSelectCarBtnObjActive(false);
     }
 }
